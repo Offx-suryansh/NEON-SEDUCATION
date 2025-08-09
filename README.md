@@ -1,6 +1,6 @@
 # Neon Education
 
-Neon Education is a modern, neon-themed educational website crafted using HTML, CSS, and JavaScript. It combines vibrant glowing visuals and interactive features to create an engaging and immersive learning experience.
+Neon Education is a modern, neon-themed S*x educational website crafted using HTML, CSS, and JavaScript. It combines vibrant glowing visuals and interactive features to create an engaging and immersive learning experience.
 
 ## Features
 
