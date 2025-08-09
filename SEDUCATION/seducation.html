@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Neon Seduction | Ultra Hot Edition</title>
+	<link rel="stylesheet" href="seducation.css">
+	<script src="seducation.js"></script>
+
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="particle-container" id="particles"></div>
+	<div class="heat-waves"></div>
+	<div class="laser-grid"></div>
+
+	<header class="header">
+		<div class="title-container">
+			<h1><span class="neon-text burning">NEON</span> <span class="seduction-text">SEDUCTION</span></h1>
+			<div class="subtitle-container">
+				<p class="subtitle">LET YOUR WILD FANTASIES OUT 💦 </p>
+				<div class="heat-meter">
+					<div class="heat-bar" id="heatBar"></div>
+					<span class="heat-label">HEAT LEVEL</span>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main class="neon-main">
+		<div class="image-container">
+			<div class="plasma-ring"></div>
+			<img src="https://m.media-amazon.com/images/I/51nW-7yyGTL._SX522_.jpg" alt="Neon Seduction" class="neon-image" id="neonImage">
+			<div class="heat-distortion"></div>
+		</div>
+	</main>
+
+	<nav class="control-nav">
+		<button class="nav-btn spicy" data-target="leftPanel">
+			<i class="fas fa-fire"></i>
+			<span>Colors</span>
+			<div class="btn-glow"></div>
+		</button>
+		<button class="nav-btn spicy" data-target="rightPanel">
+			<i class="fas fa-bolt"></i>
+			<span>Effects</span>
+			<div class="btn-glow"></div>
+		</button>
+		<button class="nav-btn spicy" data-target="bottomPanel">
+			<i class="fas fa-expand-arrows-alt"></i>
+			<span>Zoom</span>
+			<div class="btn-glow"></div>
+		</button>
+		<button class="nav-btn spicy" data-target="topPanel">
+			<i class="fas fa-moon"></i>
+			<span>Mood</span>
+			<div class="btn-glow"></div>
+		</button>
+		<button class="nav-btn round-btn hot-center" data-target="centerPanel">
+			<i class="fas fa-heart"></i>
+			<div class="pulse-ring"></div>
+		</button>
+	</nav>
+
+	<!-- Left Slide Panel -->
+	<div class="slide-panel left-panel" id="leftPanel">
+		<div class="panel-header">
+			<h2><i class="fas fa-fire"></i> Color Seduction</h2>
+			<button class="close-btn">&times;</button>
+		</div>
+		<div class="panel-content">
+			<div class="color-presets">
+				<button class="color-btn hot-pink" data-color="#ff1493" style="background: linear-gradient(45deg, #ff1493, #ff69b4);"></button>
+				<button class="color-btn fire-orange" data-color="#ff4500" style="background: linear-gradient(45deg, #ff4500, #ff8c00);"></button>
+				<button class="color-btn passion-red" data-color="#dc143c" style="background: linear-gradient(45deg, #dc143c, #ff1493);"></button>
+				<button class="color-btn royal-purple" data-color="#8a2be2" style="background: linear-gradient(45deg, #8a2be2, #da70d6);"></button>
+				<button class="color-btn electric-blue" data-color="#00bfff" style="background: linear-gradient(45deg, #00bfff, #1e90ff);"></button>
+				<button class="color-btn toxic-green" data-color="#00ff41" style="background: linear-gradient(45deg, #00ff41, #39ff14);"></button>
+			</div>
+			<div class="color-sliders">
+				<div class="slider-group red-slider">
+					<label>🔥 Red Heat <span id="redValue" class="value-display">255</span></label>
+					<div class="slider-container">
+						<input type="range" id="redRange" min="0" max="255" value="255" class="sexy-slider">
+						<div class="slider-track red-track"></div>
+						<div class="slider-fill red-fill"></div>
+					</div>
+				</div>
+				<div class="slider-group green-slider">
+					<label>⚡ Green Power <span id="greenValue" class="value-display">20</span></label>
+					<div class="slider-container">
+						<input type="range" id="greenRange" min="0" max="255" value="20" class="sexy-slider">
+						<div class="slider-track green-track"></div>
+						<div class="slider-fill green-fill"></div>
+					</div>
+				</div>
+				<div class="slider-group blue-slider">
+					<label>💙 Blue Passion <span id="blueValue" class="value-display">147</span></label>
+					<div class="slider-container">
+						<input type="range" id="blueRange" min="0" max="255" value="147" class="sexy-slider">
+						<div class="slider-track blue-track"></div>
+						<div class="slider-fill blue-fill"></div>
+					</div>
+				</div>
+				<div class="slider-group intensity-slider">
+					<label>🌡️ Heat Intensity <span id="intensityValue" class="value-display">5</span></label>
+					<div class="slider-container">
+						<input type="range" id="heatIntensity" min="1" max="10" value="5" class="sexy-slider heat-slider">
+						<div class="slider-track heat-track"></div>
+						<div class="slider-fill heat-fill"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Right Slide Panel -->
+	<div class="slide-panel right-panel" id="rightPanel">
+		<div class="panel-header">
+			<h2><i class="fas fa-bolt"></i> Seductive Effects</h2>
+			<button class="close-btn">&times;</button>
+		</div>
+		<div class="panel-content">
+			<button class="effect-btn pulse-effect" data-effect="pulse">
+				<i class="fas fa-heartbeat"></i> Passionate Pulse
+				<div class="effect-preview pulse-preview"></div>
+			</button>
+			<button class="effect-btn flicker-effect" data-effect="flicker">
+				<i class="fas fa-bolt"></i> Electric Flicker
+				<div class="effect-preview flicker-preview"></div>
+			</button>
+			<button class="effect-btn throb-effect" data-effect="throb">
+				<i class="fas fa-heart"></i> Sensual Throb
+				<div class="effect-preview throb-preview"></div>
+			</button>
+			<button class="effect-btn glow-effect" data-effect="glow">
+				<i class="fas fa-sun"></i> Radiant Glow
+				<div class="effect-preview glow-preview"></div>
+			</button>
+			<button class="effect-btn wave-effect" data-effect="wave">
+				<i class="fas fa-water"></i> Heat Wave
+				<div class="effect-preview wave-preview"></div>
+			</button>
+			<div class="intensity-control">
+				<label for="effectIntensity">💥 Effect Power: <span id="effectIntensityValue" class="value-display">5</span></label>
+				<div class="slider-container">
+					<input type="range" id="effectIntensity" min="1" max="10" value="5" class="sexy-slider effect-slider">
+					<div class="slider-track effect-track"></div>
+					<div class="slider-fill effect-fill"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Top Slide Panel -->
+	<div class="slide-panel top-panel" id="topPanel">
+		<div class="panel-header">
+			<h2><i class="fas fa-moon"></i> Seductive Ambiance</h2>
+			<button class="close-btn">&times;</button>
+		</div>
+		<div class="panel-content horizontal-layout">
+			<button class="mood-btn lounge-mood" data-mood="lounge">
+				<i class="fas fa-couch"></i> Intimate Lounge
+				<div class="mood-preview lounge-preview"></div>
+			</button>
+			<button class="mood-btn club-mood" data-mood="club">
+				<i class="fas fa-music"></i> Wild Club
+				<div class="mood-preview club-preview"></div>
+			</button>
+			<button class="mood-btn private-mood" data-mood="private">
+				<i class="fas fa-lock"></i> Private Suite
+				<div class="mood-preview private-preview"></div>
+			</button>
+			<button class="mood-btn fire-mood" data-mood="fire">
+				<i class="fas fa-fire"></i> Burning Desire
+				<div class="mood-preview fire-preview"></div>
+			</button>
+		</div>
+	</div>
+
+	<!-- Bottom Slide Panel -->
+	<div class="slide-panel bottom-panel" id="bottomPanel">
+		<div class="panel-header">
+			<h2><i class="fas fa-expand-arrows-alt"></i> Size Control</h2>
+			<button class="close-btn">&times;</button>
+		</div>
+		<div class="panel-content horizontal-layout">
+			<button class="size-btn zoom-in" data-size="zoomIn">
+				<i class="fas fa-search-plus"></i> Zoom In
+				<div class="size-indicator plus"></div>
+			</button>
+			<button class="size-btn zoom-out" data-size="zoomOut">
+				<i class="fas fa-search-minus"></i> Zoom Out
+				<div class="size-indicator minus"></div>
+			</button>
+			<button class="size-btn reset-size" data-size="reset">
+				<i class="fas fa-undo"></i> Reset Size
+				<div class="size-indicator reset"></div>
+			</button>
+			<button class="size-btn fullscreen" data-size="fullscreen">
+				<i class="fas fa-expand"></i> Full Experience
+				<div class="size-indicator full"></div>
+			</button>
+		</div>
+	</div>
+
+	<!-- Center Round Panel -->
+	<div class="slide-panel center-panel" id="centerPanel">
+		<div class="panel-content center-content">
+			<button class="action-btn surprise-btn" data-action="randomize">
+				<i class="fas fa-dice"></i> Surprise Me
+				<div class="action-glow"></div>
+			</button>
+			<button class="action-btn reset-btn" data-action="resetAll">
+				<i class="fas fa-power-off"></i> Reset All
+				<div class="action-glow"></div>
+			</button>
+			<button class="action-btn heat-btn" data-action="heat">
+				<i class="fas fa-fire"></i> Maximum Heat
+				<div class="action-glow"></div>
+			</button>
+			<button class="action-btn auto-btn" data-action="auto">
+				<i class="fas fa-magic"></i> Auto Seduce
+				<div class="action-glow"></div>
+			</button>
+		</div>
+	</div>
+
+	<audio id="heatSound" preload="auto">
+		<source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvWU" type="audio/wav">
+	</audio>
+</body>
+
+</html>
